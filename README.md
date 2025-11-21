@@ -106,8 +106,6 @@ The card will compute the Air Quality Score internally using the same **pessimis
 
 Basic example:
 
-<img alt="Screenshot 2025-11-20 at 11 25 56 PM" src="https://github.com/user-attachments/assets/b509c41a-6bdc-4b50-b098-71bd77324be5" />
-
 ```yaml
 type: custom:apollo-air-score-card
 name: AQI – Kitchen
@@ -152,22 +150,25 @@ In this mode:
 | **icon**       | ❌ Optional                    | Icon shown in the circular badge. Default: `mdi:sprout`. |
 | **show_temp**  | ❌ Optional                    | Show/hide the tiny temperature label. Default: `true`. |
 | **show_hum**   | ❌ Optional                    | Show/hide the tiny humidity label. Default: `true`. |
-| **temp_value** | ❌ Optional                    | Manual override for temperature (°C). If set, this value appears instead of `sensor.<slug>_sen55_temperature`. |
-| **hum_value**  | ❌ Optional                    | Manual override for humidity (%). If set, this value appears instead of `sensor.<slug>_sen55_humidity`. |
+| **temp_value** | ❌ Optional                    | Override for temperature. If set, this value appears instead of `sensor.<slug>_sen55_temperature`. |
+| **hum_value**  | ❌ Optional                    | Override for humidity. If set, this value appears instead of `sensor.<slug>_sen55_humidity`. |
 | **use_fahrenheit** | ❌ Optional | If set to `true`, the card displays temperature in °F. Internally, all score calculations still use °C. |
 
 _Temperature is always read in °C internally, but you may display °F using use_fahrenheit: true.
 _
 ## 🌡 Mini temperature & humidity examples
-Read from slug (default AQ mode)
+1) Read from slug (default AQ mode)
 ```yaml
 type: custom:apollo-air-score-card
-name: Bedroom AQ
-icon: mdi:bed
-slug: apollo_air_bedroom
+name: AQI – Kitchen
+slug: apollo_air_kitchen
 ```
 
-Hide humidity, keep temperature and use Farenheit
+<img alt="Screenshot 2025-11-20 at 11 25 56 PM" src="https://github.com/user-attachments/assets/b509c41a-6bdc-4b50-b098-71bd77324be5" />
+
+
+
+2) Hide humidity, keep temperature and use Farenheit
 ```yaml
 type: custom:apollo-air-score-card
 name: Living Room
@@ -178,7 +179,8 @@ use_fahrenheit: true
 ```
 <img alt="Screenshot 2025-11-20 at 11 28 11 PM" src="https://github.com/user-attachments/assets/b383992e-16cb-492d-a40d-b8bddd474c0d" />
 
-Generic usage (curtains) with no temp/hum
+
+3) Generic usage (curtains) with no temp/hum
 ```yaml
 type: custom:apollo-air-score-card
 name: Curtain Opening
@@ -190,17 +192,17 @@ show_hum: false
 <img alt="image" src="https://github.com/user-attachments/assets/e6590d5d-f4c2-4fe8-a95d-7f3deb0a48df" />
 
 
-
-Custom score + manual temp/hum context
+4) Custom score + manual temp/hum context
 ```yaml
 type: custom:apollo-air-score-card
 name: Office Comfort
 icon: mdi:briefcase
 pct_entity: number.office_comfort_score
-temp_value: 22.5
-hum_value: 40
+temp_value: number.temp_entity
+hum_value: number.hum_entity
 ```
 
+<img width="503" height="193" alt="Screenshot 2025-11-20 at 11 33 43 PM" src="https://github.com/user-attachments/assets/5e771396-db70-4eb5-9838-581981a1d373" />
 
 ### ⚠️ Disclaimer
 
