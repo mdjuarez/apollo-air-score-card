@@ -8,6 +8,8 @@ This custom card can:
 
 <img alt="Screenshot 2025-11-20 at 10 35 57 PM" src="https://github.com/user-attachments/assets/fbe975d7-d8f4-4972-9c2c-341b0231cc78" />
 
+<img  alt="Screenshot 2025-11-21 at 1 00 40 AM" src="https://github.com/user-attachments/assets/8e10f48c-0925-49bc-855a-7c631421a7cf" />
+
 
 ---
 
