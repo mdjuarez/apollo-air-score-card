@@ -204,6 +204,29 @@ hum_value: number.hum_entity
 
 <img width="503" height="193" alt="Screenshot 2025-11-20 at 11 33 43 PM" src="https://github.com/user-attachments/assets/5e771396-db70-4eb5-9838-581981a1d373" />
 
+# ⚠️ Idea!
+
+Use it together with **swipe-card** to flip between the score and the full Apollo AIR-1 view:
+
+![aqi](https://github.com/user-attachments/assets/014013b9-d027-4c4b-8b48-421686bd376d)
+
+Example:
+```yaml
+type: custom:swipe-card
+cards:
+  - type: custom:apollo-air-score-card
+    slug: apollo_air_max
+    name: Air Quality - Max
+  - type: custom:apollo-air1-card
+    slug: apollo_air_max
+    icon: mdi:bed
+    name: Max
+```
+
+Swipe card 👉 https://github.com/bramkragten/swipe-card
+
+Apollo Air Card: 👉 https://github.com/mdjuarez/apollo-air-card
+
 ### ⚠️ Disclaimer
 
 This card’s default air-quality score is not a medical or scientific certification.
@@ -214,13 +237,13 @@ The score is intended for home use and experimentation, not for safety-critical 
 
 You are encouraged to:
 
-Adjust the thresholds and scoring to your needs
+* Adjust the thresholds and scoring to your needs
 
-Build your own AQI helpers or models
+* Build your own AQI helpers or models
 
-Open issues / PRs with improvements or ideas
+* Open issues / PRs with improvements or ideas
 
-Always refer to official air-quality standards and local guidelines when making health-related decisions.
+* Always refer to official air-quality standards and local guidelines when making health-related decisions.
 
 # 🧰 Beginner Installation Guide (Step-by-Step)
 
